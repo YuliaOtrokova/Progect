@@ -34,6 +34,8 @@ jobs:
         run: chromium-browser --version
       - name: Install poetry
         run: curl -sSL https://install.python-poetry.org | python3 -
+      - name: creat venv
+        run: poetry shell
       - name: install dependencies
         run: poetry install
       - name: run pytest
